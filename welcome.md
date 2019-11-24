@@ -17,62 +17,60 @@ __The mission of the Bioinformatics Core facility is to facilitate outstanding o
 * Training courses information
   * training.bioinformatics@ucdavis.edu
 
-## Workshop Goals
+  ## Workshop Goals
 
-* End to End understanding of RNAseq differential
-  * Discussions/lectures
-  * Technologies
-  * Experimental design
-  * Cost estimation
-  * Workflow
-  * mRNA gene expression analysis
-* To work through a complete experiment, starting from raw data to completion, including making a few figures.
-* Goal is 30-40% lecture/discussion 60-70% hands-on
+  * End to End understanding of scRNAseq Analysis
+    * Discussions/lectures
+    * Technologies
+    * Experimental design
+    * Cost estimation
+    * Workflow
+    * scRNA gene expression analysis
+  * To work through a complete experiment, starting from raw data to completion, including making a few figures.
+  * Goal is 30-40% lecture/discussion 60-70% hands-on
 
-## Internet
+  ## Internet
 
-You will need to access the UCD wireless via your laptop to participate in the hands-on exercises.
+  ### Eduroam
+  Many academic (and some non-academic) institutions are a part of Eduroam. (See "List of Institutions" under "Members" at https://www.eduroam.us/ to find out if your institution is a member.) Please make sure you can log into Eduroam with your device at your home institution, which will make things easier once you come to UCSF.
 
-### Eduroam
+  If your institution is not a member of Eduroam, you can still access the open wireless through ["UCSF guest"](#ucsf-guest-wireless).
 
-Many academic institutions are part of Eduroam. (See "List of Institutions" under
-"Members" at https://www.eduroam.us/ to find out if your institution is a member.) Please make sure you
-can log into Eduroam with your device at your home institution, which will make things easier once you come to UCD.
+  ### UCSF Guest Wireless
 
-### UCD Guest wireless
+  You will need to access the UCSF wireless via your laptop to participate in the hands-on exercises. Please review https://it.ucsf.edu/services/ucsfguest-open-wireless for access instructions.
 
-You will need to access the UCD wireless via your laptop to participate in the hands-on exercises. Please review [http://itcatalog.ucdavis.edu/service/wireless-guest-access](http://itcatalog.ucdavis.edu/service/wireless-guest-access) for access instructions.
+  ## Workshop Materials
 
-## Workshop Materials
+  Workshop materials are all posted on github, and publicly available
 
-Workshop materials are all posted on github, and publicly available
+  http://bioinformatics.ucdavis.edu/training/events/
 
-http://bioinformatics.ucdavis.edu/training/events/
+  * Github main page:
 
-* Github main page:
+  	https://github.com/ucdavis-bioinformatics-training
 
-	https://github.com/ucdavis-bioinformatics-training
+  * This scRNAseq Workshop
 
-* This RNAseq Workshop
+    https://ucdavis-bioinformatics-training.github.io/2019-Fall-single-cell-RNA-sequencing-Workshop-UCSF/
 
-  https://ucdavis-bioinformatics-training.github.io/2019_August_UCD_mRNAseq_Workshop/  
+    https://github.com/ucdavis-bioinformatics-training/2019-Fall-single-cell-RNA-sequencing-Workshop-UCSF/
 
-  https://github.com/ucdavis-bioinformatics-training/2019_August_UCD_mRNAseq_Workshop
+  ## Computing Cluster
 
-## Computing Cluster
+  Course will be conducted on our servers and compute cluster .  
+  tadpole.genomecenter.ucdavis.edu
 
-Course will be conducted on our servers and compute cluster .  
-tadpole.genomecenter.ucdavis.edu
+  Everyone should get an account.  
+  https://computing.genomecenter.ucdavis.edu	 
 
-Everyone should get an account.  
-https://computing.genomecenter.ucdavis.edu	 
+  Request an account -> sponsor "Bioinformatics Core Workshop"
 
-Request an account -> sponsor "Bioinformatics Core Workshop"
+  If you already have an account on our system, then please do **NOT** create a new account and instead tell us your username and we will add you to the workshop.
 
-If you already have an account on our systems, then please tell us your username.
+  This course does not utilize the cluster.
 
-Cluster usage will be under the slurm reservation  ‘workshop’
-
-Reservation will last 1 full week after the workshop and allow you to practice or run analyze your own data.
-
-**workshop       ACTIVE  2019-08-19T00:00:00  2019-08-31T00:00:00  12-00:00:00  rafter-[0,2,8,14,18]**
+  ## Industry Sponsors Lunch and Learn
+  * [Celsee](https://www.celsee.com/)
+  * [Takara](https://www.takarabio.com/)
+  * [10X Genomics](https://www.10xgenomics.com/)
