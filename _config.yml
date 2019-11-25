@@ -56,9 +56,9 @@ navigation:
   - title: scRNAseq Analysis - PART6
     url: scrnaseq_analysis/scRNA_Workshop-PART6
 
-#### Part 7 taught by [Dr. Gerald Quon](https://qlab.faculty.ucdavis.edu/)
-* [scRNAseq Analysis - PART7](scrnaseq_analysis/scRNA_Workshop-PART7.md)
-
+  - Heading: Guest lecture by Dr. Gerald Quon
+  - title: scRNAseq Analysis - PART7
+    url: scrnaseq_analysis/scRNA_Workshop-PART7
 
   - heading: Support
   - title: Cheat Sheets
