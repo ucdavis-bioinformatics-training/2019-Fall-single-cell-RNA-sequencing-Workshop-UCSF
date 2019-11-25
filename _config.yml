@@ -35,11 +35,31 @@ navigation:
     url: intro2R/data_in_R_fixed
 
   - heading: Data Reduction
-  - title: Genering Expression Matrix
-    url: data_reduction/Expression_Matrix
   - title: Project setup
     url: data_reduction/project_setup
-    
+  - title: Generating Expression Matrix
+    url: data_reduction/Expression_Matrix
+
+  - heading: scRNAseq Analysis
+  - title: Prepare scRNAseq Analysis
+    url: scrnaseq_analysis/scrna_analysis_prepare
+  - title: scRNAseq Analysis - PART1
+    url: scrnaseq_analysis/scRNA_Workshop-PART1
+  - title: scRNAseq Analysis - PART2
+    url: scrnaseq_analysis/scRNA_Workshop-PART2
+  - title: scRNAseq Analysis - PART3
+    url: scrnaseq_analysis/scRNA_Workshop-PART3
+  - title: scRNAseq Analysis - PART4
+    url: scrnaseq_analysis/scRNA_Workshop-PART4
+  - title: scRNAseq Analysis - PART5
+    url: scrnaseq_analysis/scRNA_Workshop-PART5
+  - title: scRNAseq Analysis - PART6
+    url: scrnaseq_analysis/scRNA_Workshop-PART6
+
+#### Part 7 taught by [Dr. Gerald Quon](https://qlab.faculty.ucdavis.edu/)
+* [scRNAseq Analysis - PART7](scrnaseq_analysis/scRNA_Workshop-PART7.md)
+
+
   - heading: Support
   - title: Cheat Sheets
     url: cheatSheetIndex
