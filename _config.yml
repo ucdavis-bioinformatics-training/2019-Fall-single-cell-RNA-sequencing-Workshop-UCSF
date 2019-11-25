@@ -33,3 +33,21 @@ navigation:
     url: intro2R/data_in_R_prepare_fixed
   - title: Data in R (extra)
     url: intro2R/data_in_R_fixed
+
+  - heading: Support
+  - title: Cheat Sheets
+    url: cheatSheetIndex
+  - title: Software and Links
+    url: software
+  - title: Scripts
+    url: script_links
+
+  - heading: ETC
+  - title: Closing thoughts
+    url: closing
+  - title: Workshop Photos
+    url: photos/photos
+  - title: Github
+    url: https://github.com/ucdavis-bioinformatics-training/2019-Fall-single-cell-RNA-sequencing-Workshop-UCSF
+  - title: Biocore website
+    url: http://bioinformatics.ucdavis.edu
