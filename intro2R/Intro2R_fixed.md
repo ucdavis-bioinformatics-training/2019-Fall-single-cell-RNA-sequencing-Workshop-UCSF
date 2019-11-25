@@ -7,93 +7,6 @@ output:
     keep_md: TRUE
 ---
 
-
-
-
-R and RStudio
-========================================================
-
-# What is R?
-[R](http://r-project.org/) is a language and environment for statistical computing and graphics developed in 1993. It provides a wide variety of statistical and graphical techniques (linear and nonlinear modeling, statistical tests, time series analysis, classification, clustering, ...), and is highly extensible, meaning that the user community can write new R tools. It is a GNU project (Free and Open Source).
-
-The R language has its roots in the S language and environment which was developed at Bell Laboratories (formerly AT&T, now Lucent Technologies) by John Chambers and colleagues. R was created by Ross Ihaka and Robert Gentleman at the University of Auckland, New Zealand, and now, R is developed by the R Development Core Team, of which Chambers is a member. R is named partly after the first names of the first two R authors (Robert Gentleman and Ross Ihaka), and partly as a play on the name of S. R can be considered as a different implementation of S. There are some important differences, but much code written for S runs unaltered under R.
-
-Some of R's strengths:
-
-* The ease with which well-designed publication-quality plots can be produced, including mathematical symbols and formulae where needed. Great care has been taken over the defaults for the minor design choices in graphics, but the user retains full control.
-* It compiles and runs on a wide variety of UNIX platforms and similar systems (including FreeBSD and Linux), Windows and MacOS.
-* R can be extended (easily) via packages.
-* R has its own LaTeX-like documentation format, which is used to supply comprehensive documentation, both on-line in a number of formats and in hardcopy.
-* It has a vast community both in academia and in business.
-* It's FREE!   
-
-# The R environment
-R is an integrated suite of software facilities for data manipulation, calculation and graphical display. It includes
-
-* an effective data handling and storage facility,
-* a suite of operators for calculations on arrays, in particular matrices,
-* a large, coherent, integrated collection of intermediate tools for data analysis,
-* graphical facilities for data analysis and display either on-screen or on hardcopy, and
-* a well-developed, and effective programming language which includes conditionals, loops, user-defined recursive functions and input and output facilities.
-
-The term "environment" is intended to characterize it as a fully planned and coherent system, rather than an incremental accretion of very specific and inflexible tools, as is frequently the case with other data analysis software.
-
-R, like S, is designed around a true computer language, and it allows users to add additional functionality by defining new functions. Much of the system is itself written in the R dialect of S, which makes it easy for users to follow the algorithmic choices made. For computationally-intensive tasks, C, C++ and Fortran code can be linked and called at run time. Advanced users can write C code to manipulate R objects directly.
-
-Many users think of R as a statistics system. The R group prefers to think of it of an environment within which statistical techniques are implemented.   
-
-# The R Homepage
-The R homepage has a wealth of information on it,
-
-[R-project.org](http://r-project.org/)
-
-On the homepage you can:
-
-* Learn more about R
-* Download R
-* Get Documentation (official and user supplied)
-* Get access to CRAN 'Comprehensive R archival network'
-
-# Interface for R
-
-There are many ways one can interface with R language. Here are a few popular ones:
-
-* [RStudio](https://raw.githubusercontent.com/ucdavis-bioinformatics-training/2019-March-Bioinformatics-Prerequisites/master/wednesday/Intro2R/rstudio.png)
-* [RGui](https://raw.githubusercontent.com/ucdavis-bioinformatics-training/2019-March-Bioinformatics-Prerequisites/master/wednesday/Intro2R/rgui.png)
-* Jupyter and R notebooks
-* text editors, such as vi(m), Emacs...
-
-
-# RStudio
-
-[RStudio](http://rstudio.com/) started in 2010, to offer R a more full featured integrated development environment (IDE) and modeled after matlab's IDE.
-
-RStudio has many features:
-
-* syntax highlighting
-* code completion
-* smart indentation
-* "Projects"
-* workspace browser and data viewer
-* embedded plots
-* Markdown notebooks, Sweave authoring and knitr with one click pdf or html
-* runs on all platforms and over the web
-* etc. etc. etc.
-
-RStudio and its team have contributed to many R packages.[13] These include:
-
-* Tidyverse – R packages for data science, including ggplot2, dplyr, tidyr, and purrr
-* Shiny – An interactive web technology
-* RMarkdown – Insert R code into markdown documents
-* knitr – Dynamic reports combining R, TeX, Markdown & HTML
-* packrat – Package dependency tool
-* devtools – Package development tool
-
-RStudio Cheat Sheets: [rstudio-ide.pdf](https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf)
-
----
-
-
 Topics covered in this introduction to R
 ====================================================
 1. Basic concepts
@@ -402,7 +315,7 @@ names(friend_ages) <- c("Mina", "Ella", "Anna", "Carla")
 friend_ages
 ```
 
-<div class='r_output'>  Mina  Ella  Anna Carla 
+<div class='r_output'>  Mina  Ella  Anna Carla
     21    27    26    32
 </div>
 ```r
@@ -411,7 +324,7 @@ names(friend_ages) <- friend_names
 friend_ages
 ```
 
-<div class='r_output'> Mina Ella Anna Cora 
+<div class='r_output'> Mina Ella Anna Cora
    21   27   26   32
 </div>
 Or One may create a vector with named elements from scratch.
@@ -421,7 +334,7 @@ friend_ages <- c(Mina=21, Ella=27, Anna=26, Cora=32)
 friend_ages
 ```
 
-<div class='r_output'> Mina Ella Anna Cora 
+<div class='r_output'> Mina Ella Anna Cora
    21   27   26   32
 </div>
 To find out the length of a vector:
@@ -438,28 +351,28 @@ To access elements of a vector: by index, or by name if it is a named vector.
 friend_ages[2]
 ```
 
-<div class='r_output'> Ella 
+<div class='r_output'> Ella
    27
 </div>
 ```r
 friend_ages["Ella"]
 ```
 
-<div class='r_output'> Ella 
+<div class='r_output'> Ella
    27
 </div>
 ```r
 friend_ages[c(1,3)]
 ```
 
-<div class='r_output'> Mina Anna 
+<div class='r_output'> Mina Anna
    21   26
 </div>
 ```r
 friend_ages[c("Mina", "Anna")]
 ```
 
-<div class='r_output'> Mina Anna 
+<div class='r_output'> Mina Anna
    21   26
 </div>
 ```r
@@ -467,7 +380,7 @@ friend_ages[c("Mina", "Anna")]
 friend_ages[-3]
 ```
 
-<div class='r_output'> Mina Ella Cora 
+<div class='r_output'> Mina Ella Cora
    21   27   32
 </div>
 To select a subset of a vector can be done by logical vector.
@@ -576,14 +489,14 @@ my_matrix["row1", "col3"]
 my_matrix[1,]
 ```
 
-<div class='r_output'> col1 col2 col3 
+<div class='r_output'> col1 col2 col3
     1    2    8
 </div>
 ```r
 my_matrix[,3]
 ```
 
-<div class='r_output'> row1 row2 row3 row4 
+<div class='r_output'> row1 row2 row3 row4
     8   37  267   19
 </div>
 
@@ -625,7 +538,7 @@ Total of each row.
 rowSums(my_matrix)
 ```
 
-<div class='r_output'> row1 row2 row3 row4 
+<div class='r_output'> row1 row2 row3 row4
    11   58  302   38
 </div>
 Total of each column.
@@ -634,7 +547,7 @@ Total of each column.
 colSums(my_matrix)
 ```
 
-<div class='r_output'> col1 col2 col3 
+<div class='r_output'> col1 col2 col3
    21   57  331
 </div>
 It is also possible to use the function apply() to apply any statistical functions to rows/columns of matrices. The advantage of using apply() is that it can take a function created by user.
@@ -654,7 +567,7 @@ To calculate the mean of each row.
 apply(my_matrix, 1, mean)
 ```
 
-<div class='r_output'>       row1       row2       row3       row4 
+<div class='r_output'>       row1       row2       row3       row4
    3.666667  19.333333 100.666667  12.666667
 </div>
 To calculate the median of each row
@@ -664,7 +577,7 @@ To calculate the median of each row
 apply(my_matrix, 1, median)
 ```
 
-<div class='r_output'> row1 row2 row3 row4 
+<div class='r_output'> row1 row2 row3 row4
     2   18   27   10
 </div>
 
@@ -739,7 +652,7 @@ If you want to know the number of individuals at each levels, there are two func
 summary(friend_groups)
 ```
 
-<div class='r_output'> not_best_friend     best_friend 
+<div class='r_output'> not_best_friend     best_friend
                2               2
 </div>
 
@@ -748,7 +661,7 @@ table(friend_groups)
 ```
 
 <div class='r_output'> friend_groups
- not_best_friend     best_friend 
+ not_best_friend     best_friend
                2               2
 </div>
 
@@ -936,13 +849,13 @@ my_list
 
 <div class='r_output'> $mother
  [1] "Sophia"
- 
+
  $father
  [1] "John"
- 
+
  $sisters
  [1] "Anna" "Emma"
- 
+
  $sister_age
  [1]  5 10
 </div>
@@ -1107,7 +1020,7 @@ ls()
 
 <div class='r_output'>  [1] "a"             "age"           "b"             "col1"         
   [5] "col2"          "col3"          "colFmt"        "data"         
-  [9] "data2"         "friend_ages"   "friend_groups" "friend_names" 
+  [9] "data2"         "friend_ages"   "friend_groups" "friend_names"
  [13] "friends"       "has_child"     "hello"         "is_adult"     
  [17] "is_female"     "is_male"       "my_data"       "my_friends"   
  [21] "my_list"       "my_matrix"     "title"
@@ -1172,22 +1085,22 @@ lapply(1:dim(data)[1], function(x){sum(data[x,])})
 
 <div class='r_output'> [[1]]
  [1] 0.9394493
- 
+
  [[2]]
  [1] 3.498673
- 
+
  [[3]]
  [1] 2.140273
- 
+
  [[4]]
  [1] 2.096878
- 
+
  [[5]]
  [1] 1.541112
- 
+
  [[6]]
  [1] 0.03483846
- 
+
  [[7]]
  [1] -1.116205
 </div>
@@ -1206,22 +1119,22 @@ lapply(1:dim(data)[1], function(x){log10(sum(data[x,]))})
 </div>
 <div class='r_output'> [[1]]
  [1] -0.02712667
- 
+
  [[2]]
  [1] 0.5439033
- 
+
  [[3]]
  [1] 0.3304692
- 
+
  [[4]]
  [1] 0.3215732
- 
+
  [[5]]
  [1] 0.1878341
- 
+
  [[6]]
  [1] -1.457941
- 
+
  [[7]]
  [1] NaN
 </div>
@@ -1250,22 +1163,22 @@ sapply(1:dim(data)[1], function(x){log10(sum(data[x,]))}, simplify=FALSE)
 </div>
 <div class='r_output'> [[1]]
  [1] -0.02712667
- 
+
  [[2]]
  [1] 0.5439033
- 
+
  [[3]]
  [1] 0.3304692
- 
+
  [[4]]
  [1] 0.3215732
- 
+
  [[5]]
  [1] 0.1878341
- 
+
  [[6]]
  [1] -1.457941
- 
+
  [[7]]
  [1] NaN
 </div>
@@ -1332,9 +1245,9 @@ Calculate the mean expression for each sample.
 apply(data, 2, mean)
 ```
 
-<div class='r_output'>          V1          V2          V3          V4          V5          V6 
-  0.38447484  0.49181913 -0.35523947 -0.44494529  0.08749222  0.21590775 
-          V7 
+<div class='r_output'>          V1          V2          V3          V4          V5          V6
+  0.38447484  0.49181913 -0.35523947 -0.44494529  0.08749222  0.21590775
+          V7
   0.92549352
 </div>
 Calculate the range of expression for each sample.
@@ -1455,7 +1368,7 @@ hist(x, breaks=seq(range(x)[1]-1, range(x)[2]+1, by=0.5))
 dev.off()
 ```
 
-<div class='r_output'> null device 
+<div class='r_output'> null device
            1
 </div>
 ---
