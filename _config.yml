@@ -34,6 +34,12 @@ navigation:
   - title: Data in R (extra)
     url: intro2R/data_in_R_fixed
 
+  - heading: Data Reduction
+  - title: Genering Expression Matrix
+    url: data_reduction/Expression_Matrix
+  - title: Project setup
+    url: data_reduction/project_setup
+    
   - heading: Support
   - title: Cheat Sheets
     url: cheatSheetIndex
