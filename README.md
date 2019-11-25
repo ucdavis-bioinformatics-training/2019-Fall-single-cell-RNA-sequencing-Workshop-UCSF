@@ -2,7 +2,7 @@ All documentation for the workshop is best viewed from the github.io pages
 
 [Documentation](https://ucdavis-bioinformatics-training.github.io/2019-Fall-single-cell-RNA-sequencing-Workshop-UCSF/)
 
-Bioinformatics: scRNA-Seq Workshop @ UC San Franscisco
+Bioinformatics: scRNA-Seq Workshop @ UC San Francisco
 Nov. 25, 2019, 9 a.m. - Nov. 27, 2019, 4:30 p.m.  
 Organizer - UCD Bioinformatics Core  
 Contact - UC Davis Bioinformatics Core, training.bioinformatics@ucdavis.edu

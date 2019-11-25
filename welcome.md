@@ -32,29 +32,29 @@ __The mission of the Bioinformatics Core facility is to facilitate outstanding o
   ## Internet
 
   ### Eduroam
-  Many academic (and some non-academic) institutions are a part of Eduroam. (See "List of Institutions" under "Members" at https://www.eduroam.us/ to find out if your institution is a member.) Please make sure you can log into Eduroam with your device at your home institution, which will make things easier once you come to UCSF.
+  Many academic (and some non-academic) institutions are a part of Eduroam. (See "List of Institutions" under "Members" at [https://www.eduroam.us/](https://www.eduroam.us/) to find out if your institution is a member.) Please make sure you can log into Eduroam with your device at your home institution, which will make things easier once you come to UCSF.
 
   If your institution is not a member of Eduroam, you can still access the open wireless through ["UCSF guest"](#ucsf-guest-wireless).
 
   ### UCSF Guest Wireless
 
-  You will need to access the UCSF wireless via your laptop to participate in the hands-on exercises. Please review https://it.ucsf.edu/services/ucsfguest-open-wireless for access instructions.
+  You will need to access the UCSF wireless via your laptop to participate in the hands-on exercises. Please review [https://it.ucsf.edu/services/ucsfguest-open-wireless](https://it.ucsf.edu/services/ucsfguest-open-wireless) for access instructions.
 
   ## Workshop Materials
 
   Workshop materials are all posted on github, and publicly available
 
-  http://bioinformatics.ucdavis.edu/training/events/
+  [http://bioinformatics.ucdavis.edu/training/events/](http://bioinformatics.ucdavis.edu/training/events/)
 
   * Github main page:
 
-  	https://github.com/ucdavis-bioinformatics-training
+  	[https://github.com/ucdavis-bioinformatics-training](https://github.com/ucdavis-bioinformatics-training)
 
   * This scRNAseq Workshop
 
-    https://ucdavis-bioinformatics-training.github.io/2019-Fall-single-cell-RNA-sequencing-Workshop-UCSF/
+    [https://ucdavis-bioinformatics-training.github.io/2019-Fall-single-cell-RNA-sequencing-Workshop-UCSF/](https://ucdavis-bioinformatics-training.github.io/2019-Fall-single-cell-RNA-sequencing-Workshop-UCSF/)
 
-    https://github.com/ucdavis-bioinformatics-training/2019-Fall-single-cell-RNA-sequencing-Workshop-UCSF/
+    [https://github.com/ucdavis-bioinformatics-training/2019-Fall-single-cell-RNA-sequencing-Workshop-UCSF/](https://github.com/ucdavis-bioinformatics-training/2019-Fall-single-cell-RNA-sequencing-Workshop-UCSF/)
 
   ## Computing Cluster
 
@@ -62,7 +62,7 @@ __The mission of the Bioinformatics Core facility is to facilitate outstanding o
   tadpole.genomecenter.ucdavis.edu
 
   Everyone should get an account.  
-  https://computing.genomecenter.ucdavis.edu	 
+  [https://computing.genomecenter.ucdavis.edu](https://computing.genomecenter.ucdavis.edu)
 
   Request an account -> sponsor "Bioinformatics Core Workshop"
 

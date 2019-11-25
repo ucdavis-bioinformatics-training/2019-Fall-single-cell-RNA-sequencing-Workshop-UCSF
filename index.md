@@ -4,12 +4,12 @@ layout: default
 
 ### The menu to the left has links to all of the sections and talks we will be covering this week. You can use the Menu icon in the upper left to toggle the menu.
 
-Bioinformatics: scRNA-Seq Workshop @ UC San Franscisco
+Bioinformatics: scRNA-Seq Workshop @ UC San Francisco
 Nov. 25, 2019, 9 a.m. - Nov. 27, 2019, 4:30 p.m.  
 Organizer - UCD Bioinformatics Core  
 Contact - UC Davis Bioinformatics Core, training.bioinformatics@ucdavis.edu
 
-This workshop will cover experimental design, data generation, and analysis of single cell RNA sequencing data (primarily generated using the 10x genomics platform) on the command line and within the R statistical programming language. Participants will explore software and protocols, create and modify workflows, and diagnose/treat problematic data utilizing high performance computing services. Exercises will be performed on the command line and within R with a provided dataset. The primary packages used for analysis will be 10x software cellranger (for sequence reads to counts) and R packages (ex. Seurat) for downstream analysis.
+This workshop will cover experimental design, data generation, and analysis of single cell RNA sequencing data (primarily generated using the 10x Genomics platform) on the command line and within the R statistical programming language. Participants will explore software and protocols, create and modify workflows, and diagnose/treat problematic data utilizing high performance computing services. Exercises will be performed on the command line and within R with a provided dataset. The primary packages used for analysis will be 10x software cellranger (for sequence reads to counts) and R packages (ex. Seurat) for downstream analysis.
 
 A preliminary agenda for the week includes:
 
