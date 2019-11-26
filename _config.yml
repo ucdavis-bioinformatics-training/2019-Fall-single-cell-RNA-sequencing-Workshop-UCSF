@@ -57,9 +57,9 @@ navigation:
     url: scrnaseq_analysis/scRNA_Workshop-PART6_fixed
 
   - heading: Guest lecture by Dr. Gerald Quon
-  - title: Prepare single cell alignment
+  - title: Prepare Single Cell Alignment
     url: scrnaseq_analysis/scrna_analysis_prepare-alignment
-  - title: single cell alignment
+  - title: Single Cell Alignment (scAlign)
     url: scrnaseq_analysis/scRNA_Workshop-alignment_fixed
 
   - heading: Support
