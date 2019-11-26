@@ -60,7 +60,7 @@ navigation:
   - title: Prepare single cell alignment
     url: scrnaseq_analysis/scrna_analysis_prepare-alignment
   - title: single cell alignment
-    url: scrnaseq_analysis/scRNA_Workshop-alignment
+    url: scrnaseq_analysis/scRNA_Workshop-PART7
 
   - heading: Support
   - title: Cheat Sheets
