@@ -1,6 +1,6 @@
 ### Alignment lecture by [Dr. Gerald Quon](https://qlab.faculty.ucdavis.edu/)
 
-#install Python 3.6.8 from here:
+Install Python 3.6.8 from here:
 
 [https://www.python.org/downloads/release/python-368/](https://www.python.org/downloads/release/python-368/)
 
