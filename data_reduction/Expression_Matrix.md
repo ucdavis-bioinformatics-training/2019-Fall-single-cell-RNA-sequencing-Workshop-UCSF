@@ -287,5 +287,3 @@ Cell ranger does produce a pretty html report with the same statistics and some 
   6. Now do the same for the V3 folder
 
 ---
-
-[Commands]() used in class
