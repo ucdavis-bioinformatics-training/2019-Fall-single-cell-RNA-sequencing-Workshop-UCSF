@@ -52,22 +52,16 @@ sessionInfo()
 
 In the R console run the following command
 ```r
-download.file("https://raw.githubusercontent.com/ucdavis-bioinformatics-training/2019-Fall-single-cell-RNA-sequencing-Workshop-UCSF/master/scrnaseq_analysis/scRNA_Workshop-alignment.Rmd", "scRNA_Workshop-PART1.Rmd")
+download.file("https://raw.githubusercontent.com/ucdavis-bioinformatics-training/2019-Fall-single-cell-RNA-sequencing-Workshop-UCSF/master/scrnaseq_analysis/scRNA_Workshop-alignment.Rmd", "scRNA_Workshop-alignment.Rmd")
 ```
 
-### Download the data for the workshop, extract it.
-
-In the R console run the following command.
-```r
-download.file("https://raw.githubusercontent.com/ucdavis-bioinformatics-training/2019-Fall-single-cell-RNA-sequencing-Workshop-UCSF/master/scrnaseq_analysis/expression_tables_cellrangerV3.zip", "expression_tables_cellrangerV3.zip")
-```
 
 ### Edit the file YAML portion
 
 The top YAML (YAML ain't markup language) portion of the doc tells RStudio how to parse the document.
 
 <pre><code>---
-title: "Single Cell RNAseq Part 1"
+title: "Single Cell RNAseq Alignment"
 author: your_name
 date: current_date
 output:
