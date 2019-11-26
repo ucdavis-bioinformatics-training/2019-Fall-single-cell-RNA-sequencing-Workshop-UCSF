@@ -102,14 +102,14 @@ sessionInfo()
 
 In the R console run the following command
 ```r
-download.file("https://raw.githubusercontent.com/ucdavis-bioinformatics-training/2019-single-cell-RNA-sequencing-Workshop-UCD_UCSF/master/scrnaseq_analysis/scRNA_Workshop-PART1.Rmd", "scRNA_Workshop-PART1.Rmd")
+download.file("https://raw.githubusercontent.com/ucdavis-bioinformatics-training/2019-Fall-single-cell-RNA-sequencing-Workshop-UCSF/master/scrnaseq_analysis/scRNA_Workshop-PART1.Rmd", "scRNA_Workshop-PART1.Rmd")
 ```
 
 ### Download the data for the workshop, extract it.
 
 In the R console run the following command.
 ```r
-download.file("https://raw.githubusercontent.com/ucdavis-bioinformatics-training/2019-single-cell-RNA-sequencing-Workshop-UCD_UCSF/master/scrnaseq_analysis/expression_tables_cellrangerV3.zip", "expression_tables_cellrangerV3.zip")
+download.file("https://raw.githubusercontent.com/ucdavis-bioinformatics-training/2019-Fall-single-cell-RNA-sequencing-Workshop-UCSF/master/scrnaseq_analysis/expression_tables_cellrangerV3.zip", "expression_tables_cellrangerV3.zip")
 ```
 
 ### Edit the file YAML portion
