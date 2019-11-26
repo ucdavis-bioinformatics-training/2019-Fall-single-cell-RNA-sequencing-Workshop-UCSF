@@ -22,6 +22,13 @@ if (!any(rownames(installed.packages()) == "circlize")){
 }
 library(circlize)
 
+if (!any(rownames(installed.packages()) == "ComplexHeatmap")){
+  if (!requireNamespace("BiocManager", quietly = TRUE))
+      install.packages("BiocManager")
+  BiocManager::install("ComplexHeatmap")
+}
+library(ComplexHeatmap)
+
 ## if you have conda installed you may need to install tensorflow and initialize your environment fist.
 ## conda install tensorflow
 ## reticulate::use_condaenv("anaconda3",required = TRUE)
