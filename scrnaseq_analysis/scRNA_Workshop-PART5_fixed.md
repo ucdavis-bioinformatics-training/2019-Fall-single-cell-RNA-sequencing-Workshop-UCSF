@@ -6,14 +6,14 @@ output:
       keep_md: TRUE
 ---
 
- Load libraries
+## Load libraries
 
 ```r
 library(Seurat)
 library(ggplot2)
 ```
 
- Load the Seurat object
+## Load the Seurat object
 
 ```r
 load(file="pca_sample_corrected.RData")
@@ -25,7 +25,7 @@ experiment.aggregate
  Active assay: RNA (12811 features)
   1 dimensional reduction calculated: pca
 </div>
- Identifying clusters
+## Identifying clusters
 
 Seurat implements an graph-based clustering approach. Distances between the cells are calculated based on previously identified PCs. Seurat approach was heavily inspired by recent manuscripts which applied graph-based clustering approaches to scRNAseq data. Briefly, Seurat identify clusters of cells by a shared nearest neighbor (SNN) modularity optimization based clustering algorithm. First calculate k-nearest neighbors (KNN) and construct the SNN graph. Then optimize the modularity function to determine clusters. For a full description of the algorithms, see Waltman and van Eck (2013) The European Physical Journal B.
 
@@ -162,7 +162,7 @@ DimPlot(object = experiment.aggregate, pt.size=0.5, group.by = "cell.cycle", red
 ![](scRNA_Workshop-PART5_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
 
 
- Building  a  tree relating the 'average' cell from each cluster. Tree is estimated based on a distance matrix constructed in either gene expression space or PCA space.
+## Building  a  tree relating the 'average' cell from each cluster. Tree is estimated based on a distance matrix constructed in either gene expression space or PCA space.
 
 
 ```r
@@ -250,7 +250,7 @@ DimPlot(object = experiment.examples, pt.size=0.5, label = T, reduction = "tsne"
 ![](scRNA_Workshop-PART5_files/figure-html/unnamed-chunk-15-2.png)<!-- -->
 
 ```r
-# Re-assign clustering result to resolution 4 for cells in cluster 0 (@ reslution 0.5) [adding a R prefix]
+### Re-assign clustering result to resolution 4 for cells in cluster 0 (@ reslution 0.5) [adding a R prefix]
 newIdent = as.character(Idents(experiment.examples))
 newIdent[newIdent == '0'] = paste0("R",as.character(experiment.examples$RNA_snn_res.4[newIdent == '0']))
 
@@ -280,7 +280,7 @@ DimPlot(object = experiment.aggregate, group.by="orig.ident", pt.size=0.5, reduc
 ![](scRNA_Workshop-PART5_files/figure-html/unnamed-chunk-16-1.png)<!-- -->
 
 ```r
- Pretty tsne using alpha
+## Pretty tsne using alpha
 p <- DimPlot(object = experiment.aggregate, group.by="orig.ident", pt.size=0.5, reduction = "tsne", do.return = T)
 alpha.use <- 2/5
 p$layers[[1]]$mapping$alpha <- alpha.use
@@ -312,7 +312,7 @@ DimPlot(object = experiment.aggregate.tmp, group.by="orig.ident", pt.size=0.5, d
 
 ![](scRNA_Workshop-PART5_files/figure-html/unnamed-chunk-17-1.png)<!-- -->
 
- Identifying Marker Genes
+## Identifying Marker Genes
 
 Seurat can help you find markers that define clusters via differential expression.
 
@@ -535,7 +535,7 @@ getGeneClusterMeans <- function(gene, cluster){
   return(list(mean.in.cluster = mean.in.cluster, mean.out.of.cluster = mean.out.of.cluster))
 }
 
- for sake of time only using first six (head)
+## for sake of time only using first six (head)
 means <- mapply(getGeneClusterMeans, head(markers_all[,"gene"]), head(markers_all[,"cluster"]))
 means <- matrix(unlist(means), ncol = 2, byrow = T)
 
@@ -560,7 +560,7 @@ head(markers_all2)
  Nrsn1         1.7072675           0.9505800
  Gal           0.7620386           0.2084508
 </div>
- Finishing up clusters.
+## Finishing up clusters.
 
 At this point in time you should use the tree, markers, domain knowledge, and goals to finalize your clusters. This may mean adjusting PCA to use, mergers clusters together, choosing a new resolutions, etc. When finished you can further name it cluster by something more informative. Ex.
 
@@ -583,7 +583,7 @@ DimPlot(object = experiment.clusters, pt.size=0.5, label = T, reduction = "tsne"
 experiment.merged$finalcluster <- Idents(experiment.merged)
 ```
 
- Subsetting samples
+## Subsetting samples
 If you want to look at the representation of just one sample, or sets of samples
 
 ```r
@@ -614,7 +614,7 @@ DimPlot(object = experiment.batch1, group.by = "RNA_snn_res.0.5", pt.size=0.5, l
 
 ![](scRNA_Workshop-PART5_files/figure-html/unnamed-chunk-25-4.png)<!-- -->
 
-# Adding in a new metadata column representing samples within clusters
+### Adding in a new metadata column representing samples within clusters
 
 
 ```r
@@ -697,13 +697,13 @@ And last lets save all the objects in our session.
 save(list=ls(), file="clusters_seurat_object.RData")
 ```
 
- Get the next Rmd file
+## Get the next Rmd file
 
 ```r
 download.file("https://raw.githubusercontent.com/ucdavis-bioinformatics-training/2019-single-cell-RNA-sequencing-Workshop-UCD_UCSF/master/scrnaseq_analysis/scRNA_Workshop-PART6.Rmd", "scRNA_Workshop-PART6.Rmd")
 ```
 
- Session Information
+## Session Information
 
 ```r
 sessionInfo()

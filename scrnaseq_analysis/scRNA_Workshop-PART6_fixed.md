@@ -12,14 +12,14 @@ Reminder of samples
 * UCD_Supp_VitE
 * UCD_VitE_Def
 
- Load libraries
+## Load libraries
 
 ```r
 library(Seurat)
 library(ggplot2)
 ```
 
- Load the Seurat object
+## Load the Seurat object
 
 ```r
 load("clusters_seurat_object.RData")
@@ -454,13 +454,13 @@ FeaturePlot(experiment.merged, features = "blue.eigengene", cols = c("grey", "bl
 ![](scRNA_Workshop-PART6_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
 
 
- Get the next Rmd file
+## Get the next Rmd file
 
 ```r
 download.file("https://raw.githubusercontent.com/ucdavis-bioinformatics-training/2019-single-cell-RNA-sequencing-Workshop-UCD_UCSF/master/scrnaseq_analysis/scRNA_Workshop-PART7.Rmd", "scRNA_Workshop-PART7.Rmd")
 ```
 
- Session Information
+## Session Information
 
 ```r
 sessionInfo()

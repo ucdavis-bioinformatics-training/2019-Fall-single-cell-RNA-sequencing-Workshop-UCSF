@@ -5,13 +5,13 @@ output:
     html_document:
       keep_md: TRUE
 ---
- Load libraries
+## Load libraries
 
 ```r
 library(Seurat)
 ```
 
- Load the Seurat object
+## Load the Seurat object
 
 ```r
 load(file="pre_sample_corrected.RData")
@@ -31,11 +31,11 @@ mat[rand.genes,experiment.test$batchid=="Batch2"] <- mat[rand.genes,experiment.t
 experiment.test = SetAssayData(experiment.test, slot="data", new.data= mat )
 ```
 
- Exploring Batch effects 3 ways, none, Seurat [vars.to.regress] and COMBAT
+## Exploring Batch effects 3 ways, none, Seurat [vars.to.regress] and COMBAT
 
 First lets view the data without any corrections
 
- PCA in prep for tSNE
+## PCA in prep for tSNE
 
 ScaleData - Scales and centers genes in the dataset. 
 
@@ -46,7 +46,7 @@ experiment.test.noc <- ScaleData(object = experiment.test)
 
 <div class='r_output'> Centering and scaling data matrix
 </div>
-# Run PCA
+### Run PCA
 
 ```r
 experiment.test.noc <- RunPCA(object = experiment.test.noc)
@@ -111,7 +111,7 @@ ElbowPlot(experiment.test.noc)
 
 We use 10 components in downstream analyses. Using more components more closely approximates the full data set but increases run time.
 
-# TSNE Plot
+### TSNE Plot
 
 ```r
 pcs.use <- 10
@@ -121,7 +121,7 @@ DimPlot(object = experiment.test.noc,  group.by = "batchid")
 
 <img src="scRNA_Workshop-PART3_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
 
- Correct for sample to sample differences (seurat)
+## Correct for sample to sample differences (seurat)
 
 Use vars.to.regress to correct for the sample to sample differences and percent mitochondria
 
@@ -180,7 +180,7 @@ DimPlot(object = experiment.test.regress, group.by = "batchid", reduction.use = 
 
 <img src="scRNA_Workshop-PART3_files/figure-html/unnamed-chunk-7-1.png" style="display: block; margin: auto;" />
 
-# Corrected TSNE Plot
+### Corrected TSNE Plot
 
 ```r
 experiment.test.regress <- RunTSNE(object = experiment.test.regress, dims.use = 1:pcs.use)
@@ -189,7 +189,7 @@ DimPlot(object = experiment.test.regress, group.by = "batchid", reduction = "tsn
 
 <img src="scRNA_Workshop-PART3_files/figure-html/unnamed-chunk-8-1.png" style="display: block; margin: auto;" />
 
- COMBAT corrected, https://academic.oup.com/biostatistics/article-lookup/doi/10.1093/biostatistics/kxj037
+## COMBAT corrected, https://academic.oup.com/biostatistics/article-lookup/doi/10.1093/biostatistics/kxj037
 
 
 ```r
@@ -234,7 +234,7 @@ experiment.test.combat = ScaleData(experiment.test.combat)
 
 <div class='r_output'> Centering and scaling data matrix
 </div>
-# Principal components on ComBat adjusted data
+### Principal components on ComBat adjusted data
 
 ```r
 experiment.test.combat <- RunPCA(object = experiment.test.combat)
@@ -291,17 +291,17 @@ DimPlot(object = experiment.test.combat, group.by = "batchid", reduction = "tsne
 
 ![TSNE plot, ComBat adjusted ](scRNA_Workshop-PART3_files/figure-html/unnamed-chunk-12-1.png)
 
- Question(s)
+#### Question(s)
 
 1. Try a couple of PCA cutoffs (low and high) and compare the TSNE plots from the different methods.  Do they look meaningfully different?
 
- Get the next Rmd file
+## Get the next Rmd file
 
 ```r
 download.file("https://raw.githubusercontent.com/ucdavis-bioinformatics-training/2019-single-cell-RNA-sequencing-Workshop-UCD_UCSF/master/scrnaseq_analysis/scRNA_Workshop-PART4.Rmd", "scRNA_Workshop-PART4.Rmd")
 ```
 
- Session Information
+## Session Information
 
 ```r
 sessionInfo()

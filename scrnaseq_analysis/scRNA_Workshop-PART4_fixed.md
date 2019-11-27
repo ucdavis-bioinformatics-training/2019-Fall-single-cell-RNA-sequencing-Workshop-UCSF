@@ -6,14 +6,14 @@ output:
       keep_md: TRUE
 ---
 
- Load libraries
+## Load libraries
 
 ```r
 library(Seurat)
 library(ggplot2)
 ```
 
- Load the Seurat object
+## Load the Seurat object
 
 ```r
 load(file="pre_sample_corrected.RData")
@@ -25,7 +25,7 @@ experiment.aggregate
  Active assay: RNA (12811 features)
 </div>
 
- Now doing so for 'real'
+## Now doing so for 'real'
 
 ScaleData - Scales and centers genes in the dataset. If variables are provided in vars.to.regress, they are individually regressed against each gene, and the resulting residuals are then scaled and centered unless otherwise specified. Here we regress out for sample (orig.ident) and percentage mitochondria (percent.mito).
 
@@ -41,7 +41,7 @@ experiment.aggregate <- ScaleData(
 </div>
 <div class='r_output'> Centering and scaling data matrix
 </div>
- Dimensionality reduction with PCA
+## Dimensionality reduction with PCA
 
 Next we perform PCA (principal components analysis) on the scaled data.  
 
@@ -129,7 +129,7 @@ DimHeatmap(object = experiment.aggregate, dims = 7:12, cells = 500, balanced = T
 
 ![](scRNA_Workshop-PART4_files/figure-html/unnamed-chunk-7-2.png)<!-- -->
 
-# Selecting which PCs to use
+### Selecting which PCs to use
 To overcome the extensive technical noise in any single gene, Seurat clusters cells based on their PCA scores, with each PC essentially representing a metagene that combines information across a correlated gene set. Determining how many PCs to include downstream is therefore an important step.
 
 ElbowPlot plots the standard deviations (or approximate singular values if running PCAFast) of the principle components for easy identification of an elbow in the graph. This elbow often corresponds well with the significant PCs and is much faster to run.  This is the traditional approach to selecting principal components.
@@ -164,19 +164,19 @@ Looking at the results of the JackStraw plot, we determine to use the first 35 P
 use.pcs = 1:29
 ```
 
- Finally, lets save the filtered and normalized data
+## Finally, lets save the filtered and normalized data
 
 ```r
 save(experiment.aggregate, file="pca_sample_corrected.RData")
 ```
 
- Get the next Rmd file
+## Get the next Rmd file
 
 ```r
 download.file("https://raw.githubusercontent.com/ucdavis-bioinformatics-training/2019-single-cell-RNA-sequencing-Workshop-UCD_UCSF/master/scrnaseq_analysis/scRNA_Workshop-PART5.Rmd", "scRNA_Workshop-PART5.Rmd")
 ```
 
- Session Information
+## Session Information
 
 ```r
 sessionInfo()

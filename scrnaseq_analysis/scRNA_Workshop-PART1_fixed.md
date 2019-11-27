@@ -25,7 +25,7 @@ We start with loading needed libraries for R, at this time all we need is the pa
 library(Seurat)
 ```
 
- Load the Cell Ranger Matrix Data and create the base Seurat object.
+## Load the Cell Ranger Matrix Data and create the base Seurat object.
 Cell Ranger provides a function `cellranger aggr` that will combine multiple samples into a single matrix file. However, when processing data in R and Seurat this is unnecessary and we can aggregate them in R.
 
 Seurat provides a function `Read10X` to read in 10X data folder. First we read in data from each individual sample folder. First, we initialize the Seurat object (`CreateSeuratObject`) with the raw (non-normalized data). Keep all genes expressed in >= 10 cells. Keep all cells with at least 200 detected genes. Also extracting sample names, calculating and adding in the metadata mitochondrial percentage of each cell. Adding in the metadata batchid and cell cycle. Finally, saving the raw Seurat object.
@@ -52,7 +52,7 @@ experiment.aggregate <- CreateSeuratObject(
   names.delim = "\\-")
 ```
 
-# The percentage of reads that map to the mitochondrial genome
+### The percentage of reads that map to the mitochondrial genome
 
 * Low-quality / dying cells often exhibit extensive mitochondrial contamination.
 * We calculate mitochondrial QC metrics with the PercentageFeatureSet function, which calculates the percentage of counts originating from a set of features.
@@ -64,7 +64,7 @@ experiment.aggregate$percent.mito <- PercentageFeatureSet(experiment.aggregate, 
 ```
 
 
- Calculate cell cycle, add to meta data
+## Calculate cell cycle, add to meta data
 Using the package scran, get the mouse cell cycle markers and a mapping of m
 
 ```r
@@ -89,7 +89,7 @@ rownames(tmp) <- colnames(mat)
 experiment.aggregate <- AddMetaData(experiment.aggregate, tmp)
 ```
 
-# Lets create a fake batch metadata (used in part 3), Here we determine UCD_Adj_VitE is from one batch and UCD_Adj_VitE/UCD_Adj_VitE are from a second battch
+### Lets create a fake batch metadata (used in part 3), Here we determine UCD_Adj_VitE is from one batch and UCD_Adj_VitE/UCD_Adj_VitE are from a second battch
 
 Here we build a new metadata variable 'batchid' which can be used to specify treatment groups.
 
@@ -119,7 +119,7 @@ table(experiment.aggregate$batchid)
  Batch1 Batch2 
    1992    904
 </div>
-# Lets spend a little time getting to know the Seurat object.
+### Lets spend a little time getting to know the Seurat object.
 
 The Seurat object is the center of each single cell analysis. It stores __all__ information associated with the dataset, including data, annotations, analyses, etc. The R function slotNames can be used to view the slot names within an object.
 
@@ -153,13 +153,13 @@ head(experiment.aggregate@meta.data)
  ACATCGGGTCCATGCTC-UCD_Adj_VitE     7.557707         G1  Batch2
  ATACGGTAGTGACCAAG-UCD_Adj_VitE    11.371237         G1  Batch2
 </div>
- Question(s)
+#### Question(s)
 
 1. What slots are empty, what slots have data?
 2. What columns are available in meta.data?
 3. Look up the help documentation for subset?
 
- Finally, save the original object, write out a tab-delimited table that could be read into excel, and view the object.
+## Finally, save the original object, write out a tab-delimited table that could be read into excel, and view the object.
 
 ```r
 write.table(as.matrix(experiment.data),"raw.datatable.txt",sep="\t",col.names=T,row.names=T)
@@ -171,17 +171,17 @@ experiment.aggregate
  Active assay: RNA (12811 features)
 </div>
 ```r
- Original dataset in Seurat class, with no filtering
+## Original dataset in Seurat class, with no filtering
 save(experiment.aggregate,file="original_seurat_object.RData")
 ```
 
- Get the next Rmd file
+## Get the next Rmd file
 
 ```r
 download.file("https://raw.githubusercontent.com/ucdavis-bioinformatics-training/2019-single-cell-RNA-sequencing-Workshop-UCD_UCSF/master/scrnaseq_analysis/scRNA_Workshop-PART2.Rmd", "scRNA_Workshop-PART2.Rmd")
 ```
 
- Session Information
+## Session Information
 
 ```r
 sessionInfo()

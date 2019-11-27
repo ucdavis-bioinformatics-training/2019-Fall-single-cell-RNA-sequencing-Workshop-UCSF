@@ -5,7 +5,7 @@ output:
     html_document:
       keep_md: TRUE
 ---
- Load libraries
+## Load libraries
 
 ```r
 library(Seurat)
@@ -13,7 +13,7 @@ library(knitr)
 library(kableExtra)
 ```
 
- Load the Seurat object from part 1
+## Load the Seurat object from part 1
 
 ```r
 load(file="original_seurat_object.RData")
@@ -24,7 +24,7 @@ experiment.aggregate
  12811 features across 2896 samples within 1 assay 
  Active assay: RNA (12811 features)
 </div>
- Some basic QA/QC of the metadata, print tables of the 5% quantiles.
+## Some basic QA/QC of the metadata, print tables of the 5% quantiles.
 
 Show 5% quantiles for number of genes per cell per sample
 
@@ -179,7 +179,7 @@ FeatureScatter(
 
 ![](scRNA_Workshop-PART2_files/figure-html/unnamed-chunk-9-2.png)<!-- -->
 
-# Cell filtering
+### Cell filtering
 We use the information above to filter out cells. Here we choose those that have percent mitochondrial genes max of 10% and unique UMI counts under 20,000 or greater than 500.
 
 
@@ -194,7 +194,7 @@ experiment.aggregate
 <div class='r_output'> An object of class Seurat 
  12811 features across 2681 samples within 1 assay 
  Active assay: RNA (12811 features)
-</div># You may also want to filter out additional genes.
+</div>### You may also want to filter out additional genes.
 
 When creating the base Seurat object we did filter out some genes, recall _Keep all genes expressed in >= 10 cells_. After filtering cells and you may want to be more aggressive with the gene filter. Seurat doesn't supply such a function (that I can find), so below is a function that can do so, it filters genes requiring a min.value (log-normalized) in at least min.cells, here expression of 1 in at least 400 cells.
 
@@ -232,7 +232,7 @@ table(experiment.aggregate$orig.ident)
   UCD_Adj_VitE UCD_Supp_VitE  UCD_VitE_Def 
            808           947           926
 </div>
- Next we want to normalize the data
+## Next we want to normalize the data
 
 After filtering out cells from the dataset, the next step is to normalize the data. By default, we employ a global-scaling normalization method LogNormalize that normalizes the gene expression measurements for each cell by the total expression, multiplies this by a scale factor (10,000 by default), and then log-transforms the data.
 
@@ -245,7 +245,7 @@ experiment.aggregate <- NormalizeData(
   scale.factor = 10000)
 ```
 
- Identify variable genes
+## Identify variable genes
 
 The function FindVariableFeatures identifies the most highly variable genes (default 2000 genes) by fitting a line to the relationship of log(variance) and log(mean) using loess smoothing, uses this information to standardize the data, then calculates the variance of the standardized data.  This helps avoid selecting genes that only appear variable due to their expression level.
 
@@ -279,25 +279,25 @@ vfp1
 
 ![](scRNA_Workshop-PART2_files/figure-html/unnamed-chunk-14-1.png)<!-- -->
 
- Question(s)
+#### Question(s)
 
 1. Play some with the filtering parameters, see how results change?
 2. How do the results change if you use selection.method = "dispersion" or selection.method = "mean.var.plot"
 
 
- Finally, lets save the filtered and normalized data
+## Finally, lets save the filtered and normalized data
 
 ```r
 save(experiment.aggregate, file="pre_sample_corrected.RData")
 ```
 
- Get the next Rmd file
+## Get the next Rmd file
 
 ```r
 download.file("https://raw.githubusercontent.com/ucdavis-bioinformatics-training/2019-single-cell-RNA-sequencing-Workshop-UCD_UCSF/master/scrnaseq_analysis/scRNA_Workshop-PART3.Rmd", "scRNA_Workshop-PART3.Rmd")
 ```
 
- Session Information
+## Session Information
 
 ```r
 sessionInfo()
