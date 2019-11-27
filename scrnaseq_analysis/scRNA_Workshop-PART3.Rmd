@@ -80,7 +80,7 @@ DimPlot(object = experiment.test.regress, group.by = "batchid", reduction = "tsn
 library(sva)
 ?ComBat
 m = as.matrix(GetAssayData(experiment.test))
-com = ComBat(dat=m, batch=as.numeric(as.factor(experiment.test$orig.ident)), prior.plots=FALSE, par.prior=TRUE)
+com = ComBat(dat=m, batch=as.numeric(as.factor(experiment.test$batchid)), prior.plots=FALSE, par.prior=TRUE)
 ```
 
 
